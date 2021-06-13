@@ -76,17 +76,24 @@ const clusterUrl = process.env.RPC_ENDPOINT_URL || "https://solana-api.projectse
 const programIdV3 = "9xQeWvG816bUx9EPjHmaT23yvVM2ZWbrrpZb9PusVFin"
 
 const nativeMarketsV3: Record<string, string> = {
-  "BTC/USDT": "C1EuT9VokAKLiW7i2ASnZUvxDoKuKkCpDDeNxAptuNe4",
-  "ETH/USDT": "7dLVkUfBVfCGkFhSXDCq1ukM9usathSgS716t643iFGF",
-  "SOL/USDT": "HWHvQhFmJB3NUcu1aihKmrKegfVxBEHzwVX6yZCKEsi1",
-  "SRM/USDT": "AtNnsY1AyRERWJ8xCskfz38YdvruWVJQUVXgScC1iPb",
-  "RAY/USDT": "teE55QrL4a4QSfydR9dnHF97jgCfptpuigbb53Lo95g",
+  "BLD/USDC": "AkZyEsKBeGshQSqim8R5y8WsR4Wci9t1dGtisMdiJTqG",
+  "BOP/USDC": "7MmPwD1K56DthW14P1PnWZ4zPCbPWemGs3YggcT1KzsM",
   "BTC/USDC": "A8YFbxQYFVqKZaoYJLLUVcQiWP7G2MeEgW5wsAQgMvFw",
+  "KERMIT/USDC":"Ep5kFPdPFvBqxp7Hp9C8WhMJPPidcC1FXXiKAgCfK6vy",
+  "COPE/USDC":"6fc7v3PmjZG9Lk2XTot6BywGyYLkBQuzuFKd4FpCsPxk",
+  "DGEN/USDC": "7MtgLYSEgsq626pvcEAwaDqs2KiZsaJUX2qGpRZbcDWY",
   "ETH/USDC": "4tSvZvnbyzHXLMTiFonMyxZoHmFqau1XArcRCVHLZ5gX",
-  "SOL/USDC": "9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT",
+  "FAB/USDC": "GHPhJm8F5Kg4Xq3nxHfN2SKsgPwNPMuB8FHFsLE6RP8M",
+  "FROG/USDC": "2Si6XDdpv5zcvYna221eZZrsjsp5xeYoz9W1TVdMdbnt",
+  "FTT/USDC": "2Pbh1CvRVku1TgewMfycemghf6sU9EyuFDcNXqvRmSxc",
+  "RAY/USDT": "teE55QrL4a4QSfydR9dnHF97jgCfptpuigbb53Lo95g",
+  "RSR/USDT": "FcPet5fz9NLdbXwVM6kw2WTHzRAD7mT78UjwTpawd7hJ",
+  "SAMO/USDC":"FR3SPJmgfRSKKQ2ysUZBu7vJLpzTixXnjzb84bY3Diif",
+  "SLNDN/USDC":"F4CtSAoT1xrQSgGAJ5sVBkhofjbh4m7LcYtSKk26u9Ty",
+  "SOL/USDC":"9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT",
+  "SOLAPE/USDC":"4zffJaPyeXZ2wr4whHgP39QyTfurqZ2BEd4M5W6SEuon",
   "SRM/USDC": "ByRys5tuUWDgL73G8JBAEfkdFf8JWBzPBDHsBVQ5vbQA",
-  "RAY/USDC": "2xiv8A5xrJ7RnGdxXB42uFEkYHJjszEhaJyKKt4WaLep",
-  "MCAPS/USDC": "GgzXqy6agt7nnfoPjAEAFpWqnUwLBK5r2acaAQqXiEM8",
+  "SRM/SOL":"jyei9Fpj2GtHLDDGgcuhDacxYLLiSyxU4TY7KxB2xai"
 }
 
 const symbolsByPk = Object.assign(
@@ -245,3 +252,4 @@ app.get("/trades/address/:marketPk", async (req, res) => {
 
 const httpPort = parseInt(process.env.PORT || "5000")
 app.listen(httpPort)
+console.log(`listening on ${httpPort}`)
