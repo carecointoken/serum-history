@@ -1,3 +1,4 @@
+require('dotenv').config()
 import { Account, Connection, PublicKey } from "@solana/web3.js"
 import { Market } from "@project-serum/serum"
 import cors from "cors"
@@ -8,7 +9,6 @@ import { decodeRecentEvents } from "./events"
 import { MarketConfig, Trade, TradeSide } from "./interfaces"
 import { RedisConfig, RedisStore, createRedisStore } from "./redis"
 import { resolutions, sleep } from "./time"
-
 
 async function collectEventQueue(m: MarketConfig, r: RedisConfig) {
   const store = await createRedisStore(r, m.marketName)
@@ -63,13 +63,19 @@ async function collectEventQueue(m: MarketConfig, r: RedisConfig) {
   }
 }
 
-const redisUrl = new URL(process.env.REDIS_URL || "redis://localhost:6379")
-const host = redisUrl.hostname
-const port = parseInt(redisUrl.port)
-let password: string | undefined
-if (redisUrl.password !== "") {
-  password = redisUrl.password
-}
+// const redisUrl = new URL(process.env.REDIS_URL || "redis://localhost:6379")
+// const host = redisUrl.hostname
+// const port = parseInt(redisUrl.port)
+// let password: string | undefined
+// if (redisUrl.password !== "") {
+//   password = redisUrl.password
+// }
+
+const host= process.env.REDIS_URL || ""
+const port=parseInt(process.env.REDIS_PORT || "")
+const password=process.env.PASSWORD
+
+
 
 const network = "mainnet-beta"
 const clusterUrl = process.env.RPC_ENDPOINT_URL || "https://solana-api.projectserum.com"
