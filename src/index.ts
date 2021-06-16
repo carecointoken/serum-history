@@ -149,7 +149,7 @@ app.get("/tv/symbols", async (req, res) => {
     has_intraday: true,
     supported_resolutions: Object.keys(resolutions),
     minmov: 1,
-    pricescale: 100,
+    pricescale: 1000000,
   }
   res.send(response)
 })
