@@ -93,7 +93,13 @@ const nativeMarketsV3: Record<string, string> = {
   "SOL/USDC":"9wFFyRfZBsuAha4YcuxcXLKwMxJR43S7fPfQLusDBzvT",
   "SOLAPE/USDC":"4zffJaPyeXZ2wr4whHgP39QyTfurqZ2BEd4M5W6SEuon",
   "SRM/USDC": "ByRys5tuUWDgL73G8JBAEfkdFf8JWBzPBDHsBVQ5vbQA",
-  "SRM/SOL":"jyei9Fpj2GtHLDDGgcuhDacxYLLiSyxU4TY7KxB2xai"
+  "SRM/SOL":"jyei9Fpj2GtHLDDGgcuhDacxYLLiSyxU4TY7KxB2xai",
+  "ROPE/USDC":"4Sg1g8U2ZuGnGYxAhc6MmX9MX7yZbrrraPkCQ9MdCPtF",
+  "SAIL/USDC":"6hwK66FfUdyhncdQVxWFPRqY8y6usEvzekUaqtpKEKLr",
+  "TULIP/USDC":"8GufnKq7YnXKhnB3WNhgy5PzU9uvHbaaRrZWQK6ixPxW",
+  "SLIM/SOL":"GekRdc4eD9qnfPTjUMK5NdQDho8D9ByGrtnqhMNCTm36",
+  "BDE/USDC":"2kQer4JyDA8wRxNpSCNG8zAne1zwWVhByTUu8Qi6BEjR",
+  "NINJA/USDC":"88HrMUm3RtXGF2F4Ftnb7P9Fdh2yz9qfmAgp7jh2CFs9"
 }
 
 const symbolsByPk = Object.assign(
@@ -143,7 +149,7 @@ app.get("/tv/symbols", async (req, res) => {
     has_intraday: true,
     supported_resolutions: Object.keys(resolutions),
     minmov: 1,
-    pricescale: 100,
+    pricescale: 1000000,
   }
   res.send(response)
 })
