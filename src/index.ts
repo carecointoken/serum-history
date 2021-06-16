@@ -63,7 +63,7 @@ async function collectEventQueue(m: MarketConfig, r: RedisConfig) {
   }
 }
 
-const redisUrl = new URL(process.env.REDISCLOUD_URL || "redis://localhost:6379")
+const redisUrl = new URL(process.env.REDIS_URL || "redis://localhost:6379")
 const host = redisUrl.hostname
 const port = parseInt(redisUrl.port)
 let password: string | undefined
