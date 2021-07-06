@@ -100,8 +100,7 @@ const nativeMarketsV3: Record<string, string> = {
   "BLD/USDC": "AkZyEsKBeGshQSqim8R5y8WsR4Wci9t1dGtisMdiJTqG",
   "BOP/USDC": "7MmPwD1K56DthW14P1PnWZ4zPCbPWemGs3YggcT1KzsM",
   "BTC/USDC": "A8YFbxQYFVqKZaoYJLLUVcQiWP7G2MeEgW5wsAQgMvFw",
-  "KERMIT/USDC (Old)":"Ep5kFPdPFvBqxp7Hp9C8WhMJPPidcC1FXXiKAgCfK6vy",
-  "KERMIT/USDC (New)":"EmyoFKQQyALv7mMDL681vV5oanPsLhFggvgJh5gE29vn",
+  "KERMIT/USDC":"EmyoFKQQyALv7mMDL681vV5oanPsLhFggvgJh5gE29vn",
   "COPE/USDC":"6fc7v3PmjZG9Lk2XTot6BywGyYLkBQuzuFKd4FpCsPxk",
   "DGEN/USDC": "7MtgLYSEgsq626pvcEAwaDqs2KiZsaJUX2qGpRZbcDWY",
   "ETH/USDC": "4tSvZvnbyzHXLMTiFonMyxZoHmFqau1XArcRCVHLZ5gX",
@@ -123,7 +122,11 @@ const nativeMarketsV3: Record<string, string> = {
   "BDE/USDC":"2kQer4JyDA8wRxNpSCNG8zAne1zwWVhByTUu8Qi6BEjR",
   "NINJA/USDC":"88HrMUm3RtXGF2F4Ftnb7P9Fdh2yz9qfmAgp7jh2CFs9",
   "TGT/USDC":"GfokD5aka4n8kqCgRiJtMYi4Xd1ZLBatkynxFGyKdNTc",
-  "LIQ/USDC":"FLKUQGh9VAG4otn4njLPUf5gaUPx5aAZ2Q6xWiD3hH5u"
+  "LIQ/USDC":"FLKUQGh9VAG4otn4njLPUf5gaUPx5aAZ2Q6xWiD3hH5u",
+  "WOO/USDC":"2Ux1EYeWsxywPKouRCNiALCZ1y3m563Tc4hq1kQganiq",
+  "SLRS/USDC":"2Gx3UfV831BAh8uQv1FKSPKS9yajfeeD8GJ4ZNb2o2YP",
+  "SNY/USDC":"DPfj2jYwPaezkCmUNm5SSYfkrkz8WFqwGLcxDDUsN3gA",
+  "APEX/USDC":"GX26tyJyDxiFj5oaKvNB9npAHNgdoV9ZYHs5ijs5yG2U"
 }
 
 const symbolsByPk = Object.assign(
